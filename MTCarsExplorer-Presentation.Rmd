@@ -1,0 +1,53 @@
+---
+title: 'Assignment Week 4: Motor trend Cars Explorer Shiny App'
+author: "Emmanuel Abbey"
+date: "September 9, 2018"
+output: ioslides_presentation
+logo: r_charts.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+``` {r}
+options(warn=-1)
+
+```
+
+
+
+```{r, echo = FALSE,  message = FALSE}
+
+library(ggplot2)
+
+```
+
+
+
+## Summary
+Motor Trend Cars Explorer is a simple shiny app the help you quickly explore mtcars dataset. The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models). This app provides multiple ways for you to visualize relationship between horsepower, engine displacement, number of cylinders for different car models.
+
+[Click Here to Access the Application](https://eabbey3.shinyapps.io/MTCARS-Explorer/)
+
+
+## Application Features
+- Ability to select the type of plot to view
+- Select the color Scheme you prefer ypor plot
+- Choose to show or hide plot title
+- Chose to show or hide page summary
+
+
+## Screen Short of Application
+![](shot1.png)
+
+## Sample Plot from App
+```{r echo=TRUE}
+library(ggplot2)
+boxplot(mpg ~ cyl, data = mtcars, xlab = "Number of Cylinders",
+              ylab = "Miles Per Gallon", main = "Mileage Data",
+              col = c("indianred3","tan3","coral"))
+```
+
+
